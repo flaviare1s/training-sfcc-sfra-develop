@@ -3,7 +3,7 @@
 var server = require('server');
 
 server.get('HelloWorld', function (req, res, next) {
-    var myVariable = 'Just a string';
+    var myVariable = 'Hello World!';
 
     res.render('training/myfirsttemplate', {
         myVariable: myVariable
