@@ -1,29 +1,31 @@
 <link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('/css/style.css')}" />
-<div class="product-tile">
-    <!-- dwMarker="product" dwContentID="${product.uuid}" -->
-    <isinclude template="product/components/productTileImage" />
-    <div class="tile-body">
-        <isif condition="${pdict.display.swatches !== false}">
-            <isinclude template="product/components/productTileSwatch" />
-        </isif>
+<isif condition="${!empty(pdict.discountPercentage)}">
+    <div class="product-tile">
+        <!-- dwMarker="product" dwContentID="${product.uuid}" -->
+        <isinclude template="product/components/productTileImage" />
+        <div class="tile-body">
+            <isif condition="${pdict.display.swatches !== false}">
+                <isinclude template="product/components/productTileSwatch" />
+            </isif>
 
-        <isinclude template="product/components/productTileName" />
+            <isinclude template="product/components/productTileName" />
 
-        <isset name="price" value="${product.price}" scope="page" />
-        <isif condition="${product.productType === 'set'}">
-            <isinclude template="product/components/pricing/setPrice" />
-            <iselse>
-                <isinclude template="product/components/pricing/main" />
-        </isif>
-        <isif condition="${!empty(pdict.discountPercentage)}">
-            <iscomment> <div class="discount-percentage">
-                ${Resource.msgf('best.deal.label', 'default', null, pdict.discountPercentage)}
-            </div> </iscomment>
-            <div class="discount-percentage">${'BEST DEAL ' + pdict.discountPercentage + ' % OFF'}</div>
-        </isif>
-        <isif condition="${pdict.display.ratings !== false}">
-            <isinclude template="product/productTileFooter" />
-        </isif>
+            <isset name="price" value="${product.price}" scope="page" />
+            <isif condition="${product.productType === 'set'}">
+                <isinclude template="product/components/pricing/setPrice" />
+                <iselse>
+                    <isinclude template="product/components/pricing/main" />
+            </isif>
+            <isif condition="${!empty(pdict.discountPercentage)}">
+                <iscomment> <div class="discount-percentage">
+                    ${Resource.msgf('best.deal.label', 'default', null, pdict.discountPercentage)}
+                </div> </iscomment>
+                <div class="discount-percentage">${'BEST DEAL ' + pdict.discountPercentage + ' % OFF'}</div>
+            </isif>
+            <isif condition="${pdict.display.ratings !== false}">
+                <isinclude template="product/productTileFooter" />
+            </isif>
+        </div>
+        <!-- END_dwmarker -->
     </div>
-    <!-- END_dwmarker -->
-</div>
+</isif>
