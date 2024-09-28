@@ -17,7 +17,7 @@
         </isif>
         <isif condition="${!empty(pdict.discountPercentage)}">
             <iscomment> <div class="discount-percentage">
-                ${Resource.msg('best.deal.label', 'default', null, pdict.discountPercentage)}
+                ${Resource.msgf('best.deal.label', 'default', null, pdict.discountPercentage)}
             </div> </iscomment>
             <div class="discount-percentage">${'BEST DEAL ' + pdict.discountPercentage + ' % OFF'}</div>
         </isif>
