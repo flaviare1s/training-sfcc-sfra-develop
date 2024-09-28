@@ -16,12 +16,11 @@
                 <isinclude template="product/components/pricing/main" />
         </isif>
         <isif condition="${!empty(pdict.discountPercentage)}">
-            <div class="discount-percentage">
+            <iscomment> <div class="discount-percentage">
                 ${Resource.msgf('best.deal.label', 'default', null, pdict.discountPercentage)}
-
-            </div>
+            </div> </iscomment>
+            <div class="discount-percentage">${'BEST DEAL ' + pdict.discountPercentage + ' % OFF'}</div>
         </isif>
-            <div class="discount-percentage-test">${pdict.discountPercentage + ' % OFF'}</div>
         <isif condition="${pdict.display.ratings !== false}">
             <isinclude template="product/productTileFooter" />
         </isif>
