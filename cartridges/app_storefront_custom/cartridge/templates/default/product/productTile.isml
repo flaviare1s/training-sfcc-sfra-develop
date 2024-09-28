@@ -21,7 +21,7 @@
 
             </div>
         </isif>
-            <div class="discount-percentage">${pdict.discountPercentage + ' % OFF'}</div>
+            <div class="discount-percentage-test">${pdict.discountPercentage + ' % OFF'}</div>
         <isif condition="${pdict.display.ratings !== false}">
             <isinclude template="product/productTileFooter" />
         </isif>

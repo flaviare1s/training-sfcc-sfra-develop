@@ -1,16 +1,57 @@
 'use strict';
 
-var server = require('server'); // Importa um objeto chamado `server` que controla as rotas.
+var server = require('server');
 
-server.extend(module.superModule); // Faz com que o novo controller use o que o `superModule` (módulo superior) já tem.
+var productHelpers = require('*/cartridge/scripts/helpers/productHelpers');
+
+
+server.extend(module.superModule);
+
 
 server.append('Show', function (req, res, next) {
-    // Adiciona algo novo no endpoint 'Show'.
-    var viewData = res.getViewData(); // Pega os dados que já existem.
-    viewData.example = 'Hello World Again!'; // Cria um novo dado chamado `example` com o valor "Hello World Again!".
 
-    res.setViewData(viewData); // Salva esse novo dado na resposta.
-    return next(); // Passa para a próxima função.
+    var viewData = res.getViewData();
+
+
+    var product = viewData.product;
+    var discountPercentage = null;
+
+    if (
+        product &&
+        product.price &&
+        product.price.sales &&
+        product.price.sales.value < product.price.list.value
+    ) {
+
+        discountPercentage = productHelpers.calculatePercentageOff(
+            product.price.list.value,
+            product.price.sales.value
+        );
+    }
+
+
+    viewData.discountPercentage = discountPercentage;
+
+
+    res.setViewData(viewData);
+    return next();
 });
 
-module.exports = server.exports(); // Exporta esse controller para ser usado.
+module.exports = server.exports();
+
+// 'use strict';
+
+// var server = require('server');
+
+// server.extend(module.superModule);
+
+// server.append('Show', function (req, res, next) {
+
+//     var viewData = res.getViewData();
+//     viewData.example = 'Testando';
+
+//     res.setViewData(viewData);
+//     return next();
+// });
+
+// module.exports = server.exports();
