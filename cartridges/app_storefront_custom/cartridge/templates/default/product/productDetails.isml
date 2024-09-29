@@ -148,4 +148,6 @@
             </div>
         </div>
     </isobject>
+
+    <isinclude template="product/suggestedProducts" />
 </isdecorate>

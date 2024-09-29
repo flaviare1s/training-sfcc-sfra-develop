@@ -1,0 +1,16 @@
+<div class="suggested-products">
+    <h2>${'Test'}</h2>
+    <div class="row">
+        <isloop items="${viewData.suggestedProducts}" var="suggestedProduct">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="suggested-product-card">
+                    <a href="${suggestedProduct.URL}">
+                        <img src="${suggestedProduct.image.URL}" alt="${suggestedProduct.name}" />
+                        <h3>${suggestedProduct.productName}</h3>
+                        <div class="price">${suggestedProduct.price}</div>
+                    </a>
+                </div>
+            </div>
+        </isloop>
+    </div>
+</div>
