@@ -6,9 +6,6 @@ var consentTracking = require('*/cartridge/scripts/middleware/consentTracking');
 var pageMetaData = require('*/cartridge/scripts/middleware/pageMetaData');
 var productHelper = require('*/cartridge/scripts/helpers/productHelpers');
 
-/**
- * Extensão da Rota Product-Show
- */
 server.extend(module.superModule);
 
 server.get(
@@ -30,7 +27,6 @@ server.get(
                 addToCartUrl: showProductPageHelperResult.addToCartUrl,
                 resources: showProductPageHelperResult.resources,
                 breadcrumbs: showProductPageHelperResult.breadcrumbs,
-                // Customizações adicionadas aqui
                 customData:
                     'Adicione mais informações ou variáveis personalizadas aqui'
             });
