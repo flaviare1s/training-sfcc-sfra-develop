@@ -230,7 +230,7 @@ function normalizeSelectedAttributes(apiProduct, params) {
 /**
  * Get information for model creation
  * @param {dw.catalog.Product} apiProduct - Product from the API
- * @param {Object} params - Parameters passed by querystring
+ * @param {Object} params - Parameters passed por querystring
  *
  * @returns {Object} - Config object
  */
@@ -502,9 +502,37 @@ function getProductSearchHit(apiProduct) {
     searchModel.setSearchPhrase(apiProduct.ID);
     searchModel.search();
 
-    if (searchModel.count === 0) {
+    // Adicionando logs para verificar o estado do searchModel
+    var hits = searchModel.getProductSearchHits();
+    var hitCount = searchModel.count;
+    var firstHit = hits.hasNext() ? hits.next() : null;
+
+    var logMessage =
+        'Search Model State: ' +
+        'Count: ' +
+        hitCount +
+        ', ' +
+        'First Hit: ' +
+        JSON.stringify(firstHit);
+    require('dw/system/Logger').debug(logMessage);
+
+    if (hitCount === 0) {
         searchModel.setSearchPhrase(apiProduct.ID.replace(/-/g, ' '));
         searchModel.search();
+
+        // Atualizando logs após a segunda busca
+        hits = searchModel.getProductSearchHits();
+        hitCount = searchModel.count;
+        firstHit = hits.hasNext() ? hits.next() : null;
+
+        logMessage =
+            'Search Model State after second search: ' +
+            'Count: ' +
+            hitCount +
+            ', ' +
+            'First Hit: ' +
+            JSON.stringify(firstHit);
+        require('dw/system/Logger').debug(logMessage);
     }
 
     var hit = searchModel.getProductSearchHit(apiProduct);
@@ -514,6 +542,10 @@ function getProductSearchHit(apiProduct) {
             hit = tempHit;
         }
     }
+
+    // Log do hit final
+    require('dw/system/Logger').debug('Final Hit: ' + JSON.stringify(hit));
+
     return hit;
 }
 

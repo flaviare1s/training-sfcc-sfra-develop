@@ -1,6 +1,9 @@
 <div class="suggested-products">
-    <h2>${'Test'}</h2>
+    <h2>Suggested Products</h2>
     <div class="row">
+        <isscript>
+            require('dw/system/Logger').debug('Suggested Products in Template: {0}', JSON.stringify(viewData.suggestedProducts));
+        </isscript>
         <isloop items="${viewData.suggestedProducts}" var="suggestedProduct">
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="suggested-product-card">
