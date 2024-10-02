@@ -1,18 +1,11 @@
 <div class="suggested-products">
-    <h2>Suggested Products</h2>
-    <div class="row">
-        <isscript>
-            require('dw/system/Logger').debug('Suggested Products in Template: {0}', JSON.stringify(viewData.suggestedProducts));
-        </isscript>
-        <isloop items="${viewData.suggestedProducts}" var="suggestedProduct">
-            <div class="col-12 col-sm-6 col-md-3">
-                <div class="suggested-product-card">
-                    <a href="${suggestedProduct.URL}">
-                        <img src="${suggestedProduct.image.URL}" alt="${suggestedProduct.name}" />
-                        <h3>${suggestedProduct.productName}</h3>
-                        <div class="price">${suggestedProduct.price}</div>
-                    </a>
-                </div>
+    <div class="row product-grid">
+        <isloop items="${pdict.suggestedProducts}" var="product" status="loopstatus" begin="${0}" end="${3}">
+            <div class="col-md-3">
+                <isprint value="${''}" encoding="on" />
+                <isif condition="${product != undefined}">
+                    <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'swatches', true)}"/>
+                </isif>
             </div>
         </isloop>
     </div>
