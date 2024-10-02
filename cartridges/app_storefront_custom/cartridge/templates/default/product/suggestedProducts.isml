@@ -1,8 +1,8 @@
+<link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('/css/style.css')}" />
 <div class="suggested-products">
     <div class="row product-grid">
         <isloop items="${pdict.suggestedProducts}" var="product" status="loopstatus" begin="${0}" end="${3}">
             <div class="col-md-3">
-                <isprint value="${''}" encoding="on" />
                 <isif condition="${product != undefined}">
                     <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'swatches', true)}"/>
                 </isif>
