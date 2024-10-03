@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('/css/style.css')}"/>
 <isdecorate template="common/layout/page">
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
@@ -68,6 +69,8 @@
                         </isif>
                     </isloop>
                     <isinclude template="cart/cartApproachingDiscount" />
+                    <p class="cart-message">${pdict.message}</p>
+
                 </div>
                 <!---totals, and checkout actions--->
                 <div class="col-sm-5 col-md-4 totals">
@@ -88,11 +91,9 @@
             </div>
             <isinclude template="cart/cartRemoveProductModal" />
         </div>
-
         <isinclude template="cart/cartRemoveCouponModal" />
     </isif>
     <div class="container">
         <isslot id="cart-recommendations-m" description="Recommended products" context="global" />
     </div>
-    <p>${pdict.example}</p>
 </isdecorate>
