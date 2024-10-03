@@ -73,7 +73,12 @@
                         </isif>
                     </isloop>
                     <isinclude template="cart/cartApproachingDiscount" />
-                    <p class="cart-message">${pdict.message}</p>
+
+                    <isif condition="${pdict.showContent}">
+                        <isinclude template="/components/modules" sf-toolkit="off" />
+                        <iscontentasset aid="cart_total_message" />
+                    </isif>
+
                 </div>
                 <!---totals, and checkout actions--->
                 <div class="col-sm-5 col-md-4 totals">
@@ -100,4 +105,3 @@
         <isslot id="cart-recommendations-m" description="Recommended products" context="global" />
     </div>
 </isdecorate>
-
