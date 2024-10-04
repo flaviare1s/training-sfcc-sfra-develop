@@ -76,7 +76,7 @@
 
                     <isif condition="${pdict.showContent}">
                         <isinclude template="/components/modules" sf-toolkit="off" />
-                        <iscontentasset aid="cart_total_message" />
+                        <p style="width: 400px; background-color: #FEC107; padding: 0 10px;" id="cart_total_message" class="cart-message">${pdict.cartMessage}</p>
                     </isif>
 
                 </div>
