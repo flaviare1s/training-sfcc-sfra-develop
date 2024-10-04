@@ -1,0 +1,4 @@
+<div class="home-main homepage">
+    <isslot id="product_carousel" description="Main home page slot." context="global" />
+    ${'teste'}
+</div>
