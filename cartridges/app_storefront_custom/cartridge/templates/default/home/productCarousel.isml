@@ -1,4 +1,40 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('/css/style.css')}" />
+
 <div class="home-main homepage">
     <isslot id="product_carousel" description="Main home page slot." context="global" />
     ${'teste'}
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        console.log("Document is ready. Attempting to initialize Slick.");
+
+        // Verifica se o carrossel está presente
+        var $carousel = $('#product_carousel');
+
+        if ($carousel.length > 0) {
+            console.log("Element #product_carousel found.");
+            // Inicializa o Slick
+            $carousel.slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+            console.log("Slick initialized successfully.");
+        } else {
+            console.error("Error: Element #product_carousel not found.");
+        }
+    });
+</script>
