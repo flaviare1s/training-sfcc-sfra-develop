@@ -11287,7 +11287,7 @@ setprototypeof@1.2.0:
     flag-icons "7.1.0"
     font-awesome "^4.7.0"
     jquery "^3.5.1"
-    sfra "file:../../../../AppData/Local/Yarn/Cache/v6/npm-sfra-7.0.0-364e481b-e967-492a-8707-3fdb90090c30-1728148773159/node_modules/sfra"
+    sfra "file:../../../../AppData/Local/Yarn/Cache/v6/npm-sfra-7.0.0-ffc11346-e884-4e6f-9e4f-ce14634b83e8-1728151133074/node_modules/sfra"
 
 sgmf-scripts@^3.0.0:
   version "3.0.0"
