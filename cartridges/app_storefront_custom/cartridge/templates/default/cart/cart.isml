@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('/css/style.css')}" />
 <isdecorate template="common/layout/page">
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
@@ -14,7 +15,11 @@
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                ${pdict.valid.message}
+                <isif condition="${pdict.message}">
+                    <div class="alert alert-warning">
+                        ${pdict.message}
+                    </div>
+                </isif>
             </div>
         </isif>
     </div>
@@ -68,6 +73,12 @@
                         </isif>
                     </isloop>
                     <isinclude template="cart/cartApproachingDiscount" />
+
+                    <isif condition="${pdict.showContent}">
+                        <isinclude template="/components/modules" sf-toolkit="off" />
+                        <p style="width: 400px; background-color: #FEC107; padding: 0 10px;" id="cart_total_message" class="cart-message">${pdict.cartMessage}</p>
+                    </isif>
+
                 </div>
                 <!---totals, and checkout actions--->
                 <div class="col-sm-5 col-md-4 totals">
@@ -88,11 +99,9 @@
             </div>
             <isinclude template="cart/cartRemoveProductModal" />
         </div>
-
         <isinclude template="cart/cartRemoveCouponModal" />
     </isif>
     <div class="container">
         <isslot id="cart-recommendations-m" description="Recommended products" context="global" />
     </div>
-    <p>${pdict.example}</p>
 </isdecorate>

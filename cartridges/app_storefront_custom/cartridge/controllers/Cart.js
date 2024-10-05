@@ -1,16 +1,38 @@
 'use strict';
 
-var server = require('server'); // Importa um objeto chamado `server` que controla as rotas.
+var server = require('server');
+var BasketMgr = require('dw/order/BasketMgr');
+var Site = require('dw/system/Site');
+var ContentMgr = require('dw/content/ContentMgr');
 
-server.extend(module.superModule); // Faz com que o novo controller use o que o `superModule` (módulo superior) já tem.
+server.extend(module.superModule);
 
 server.append('Show', function (req, res, next) {
-    // Adiciona algo novo no endpoint 'Show'.
-    var viewData = res.getViewData(); // Pega os dados que já existem.
-    viewData.example = 'Hello World Again!'; // Cria um novo dado chamado `example` com o valor "Hello World Again!".
+    var currentBasket = BasketMgr.getCurrentBasket();
+    var cartTotal = currentBasket ? currentBasket.totalGrossPrice.value : 0;
 
-    res.setViewData(viewData); // Salva esse novo dado na resposta.
-    return next(); // Passa para a próxima função.
+    var cartTotalThreshold =
+        Site.getCurrent().getCustomPreferenceValue('cartTotalThreshold') || 200;
+
+    var showContent = cartTotal > cartTotalThreshold;
+
+    var viewData = res.getViewData();
+    viewData.showContent = showContent;
+    viewData.cartTotalThreshold = cartTotalThreshold;
+
+    if (showContent) {
+        var contentAsset = ContentMgr.getContent('cart_total_message');
+        if (contentAsset && contentAsset.online) {
+            var cartMessage = contentAsset.custom.body.toString();
+            viewData.cartMessage = cartMessage.replace(
+                /\[\[cartTotalThreshold\]\]/g,
+                cartTotalThreshold
+            );
+        }
+    }
+
+    res.setViewData(viewData);
+    next();
 });
 
-module.exports = server.exports(); // Exporta esse controller para ser usado.
+module.exports = server.exports();
