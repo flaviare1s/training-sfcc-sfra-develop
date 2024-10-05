@@ -1,8 +1,6 @@
 <isset name="showQuickView" value="${true}" scope="page" />
 <isset name="product" value="${pdict.product}" scope="page" />
 
-<isif condition="${!empty(pdict.discountPercentage)}">
-    <div class="product" data-pid="${product.id}">
-        <isinclude template="product/productTile" />
-    </div>
-</isif>
+<div class="product" data-pid="${product.id}">
+    <isinclude template="product/productTile" />
+</div>
