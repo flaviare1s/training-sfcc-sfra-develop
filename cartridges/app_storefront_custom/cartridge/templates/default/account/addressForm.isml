@@ -1,5 +1,5 @@
-<form action="${URLUtils.url('Address-SaveAddress', 'addressId', pdict.addressId)}" class="address-form bg-light w-100" method="POST"
-    name="address-form" ${pdict.addressForm.attributes}>
+<form action="${URLUtils.url('Address-SaveAddress', 'addressId', pdict.addressId)}" class="address-form bg-light w-100"
+    method="POST" name="address-form" ${pdict.addressForm.attributes}>
 
     <div class="shipping">
         <h2 class="text-center p-2 bg-white w-100">Shipping</h2>
@@ -11,7 +11,7 @@
                     <div class="form-group
                         ${pdict.addressForm.firstName.mandatory === true ? 'required' : ''}">
                         <label class="form-control-label" for="firstName">
-                            ${Resource.msg('field.shipping.address.first.name','address',null)}
+                            ${Resource.msg('field.shipping.address.first.name', 'address', null)}
                         </label>
                         <input type="text" class="form-control" id="firstName" <isprint
                             value="${pdict.addressForm.firstName.attributes}" encoding="off" />
@@ -24,7 +24,7 @@
                     <div class="form-group
                         ${pdict.addressForm.lastName.mandatory === true ? 'required' : ''}">
                         <label class="form-control-label" for="lastName">
-                            ${Resource.msg('field.shipping.address.last.name','address',null)}
+                            ${Resource.msg('field.shipping.address.last.name', 'address', null)}
                         </label>
                         <input type="text" class="form-control" id="lastName" <isprint
                             value="${pdict.addressForm.lastName.attributes}" encoding="off" />
@@ -37,10 +37,10 @@
             <div class="form-group
                 ${pdict.addressForm.address1.mandatory === true ? 'required' : ''}">
                 <label class="form-control-label" for="address1">
-                    ${Resource.msg('field.shipping.address.one','address',null)}
+                    ${Resource.msg('field.shipping.address.one', 'address', null)}
                 </label>
-                <input type="text" class="form-control" id="address1" <isprint value="${pdict.addressForm.address1.attributes}"
-                    encoding="off" />
+                <input type="text" class="form-control" id="address1" <isprint
+                    value="${pdict.addressForm.address1.attributes}" encoding="off" />
                 autocomplete="address-line1">
                 <div class="invalid-feedback"></div>
             </div>
@@ -48,10 +48,10 @@
             <div class="form-group
                 ${pdict.addressForm.address2.mandatory === true ? 'required' : ''}">
                 <label class="form-control-label" for="address2">
-                    ${Resource.msg('field.shipping.address.two','address',null)}
+                    ${Resource.msg('field.shipping.address.two', 'address', null)}
                 </label>
-                <input type="text" class="form-control" id="address2" <isprint value="${pdict.addressForm.address2.attributes}"
-                    encoding="off" />
+                <input type="text" class="form-control" id="address2" <isprint
+                    value="${pdict.addressForm.address2.attributes}" encoding="off" />
                 autocomplete="billing address-line2">
                 <div class="invalid-feedback"></div>
             </div>
@@ -72,7 +72,8 @@
                         aria-describedby="${lineItem ? lineItem.UUID : 'default'}Country">
                         <option label=" "></option>
                         <isloop items=${addressFields.country.options} var="country">
-                            <option id="${country.id}" value="${country.htmlValue}" ${shippingAddress.countryCode && country.id === shippingAddress.countryCode.value ? 'selected' : ''}>${country.label}</option>
+                            <option id="${country.id}" value="${country.htmlValue}" ${shippingAddress.countryCode && country.id === shippingAddress.countryCode.value ? 'selected' : ''}>${country.label}
+                            </option>
                         </isloop>
                         </select>
                         <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}Country">
@@ -105,14 +106,15 @@
             </div>
             <!-- Postal Code and Phone Number -->
             <div class="row">
+                <!-- Postal Code -->
                 <div class="col-6">
                     <div class="form-group
                                 ${pdict.addressForm.postalCode.mandatory === true ? 'required' : ''}">
                         <label class="form-control-label" for="zipCode">
                             ${Resource.msg('field.shipping.address.zip.code', 'address', null)}
                         </label>
-                        <input type="text" class="form-control" id="zipCode" <isprint value="${pdict.addressForm.postalCode.attributes}"
-                            encoding="off" />
+                        <input type="text" class="form-control" id="zipCode" <isprint
+                            value="${pdict.addressForm.postalCode.attributes}" encoding="off" />
                         autocomplete="postal-code">
                         <div class="invalid-feedback"></div>
                         <span>${Resource.msg('example.postalcode', 'forms', null)}</span>
@@ -123,17 +125,38 @@
                 <div class="col-6">
                     <div class="form-group
                         ${pdict.addressForm.phone.mandatory === true ? 'required' : ''}">
-                            <label class="form-control-label" for="phone">
-                                ${Resource.msg('field.shipping.address.phone', 'address', null)}
-                            </label>
-                            <input type="text" class="form-control" id="phone" <isprint value="${pdict.addressForm.phone.attributes}"
-                                encoding="off" />
-                            autocomplete="tel">
-                            <div class="invalid-feedback"></div>
-                            <span>${Resource.msg('example.phone', 'forms', null)}</span>
+                        <label class="form-control-label" for="phone">
+                            ${Resource.msg('field.shipping.address.phone', 'address', null)}
+                        </label>
+                        <input type="text" class="form-control" id="phone" <isprint
+                            value="${pdict.addressForm.phone.attributes}" encoding="off" />
+                        autocomplete="tel">
+                        <div class="invalid-feedback"></div>
+                        <span>${Resource.msg('example.phone', 'forms', null)}</span>
                     </div>
                 </div>
-        </div>
+
+            <!-- Comments -->
+            <div class="col-12">
+                <div class="form-group w-100">
+                    <label class="form-control-label" for="comments">Comments</label>
+                    <textarea class="form-control" id="comments" rows="3" maxlength="150"
+                        oninput="updateCharacterCount()"></textarea>
+                    <small id="charCount" class="form-text">You have 150 characters left out of 150</small>
+                </div>
+            </div>
+
+            <script>
+                function updateCharacterCount() {
+                    const commentsField = document.getElementById('comments');
+                    const charCountDisplay = document.getElementById('charCount');
+                    const charCount = commentsField.value.length;
+                    const remainingCharacters = 150 - charCount;
+                    charCountDisplay.innerText = `You have ${remainingCharacters} characters left out of 150`;
+                    console.log(remainingCharacters)
+                }
+            </script>
+            </div>
         </div>
     </div>
 
@@ -143,7 +166,7 @@
         </div>
     </div>
 
-        <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
 
     <!-- Save Button -->
     <div class="container bg-light p-3">
