@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
     <field formid="firstName"
            label="label.input.firstname.profile"
            type="string"
@@ -7,7 +8,7 @@
            binding="firstName"
            max-length="50"
            missing-error="address.firstname.missing"
-           range-error="error.message.50orless"/>
+           range-error="error.message.lessthan50"/>
 
     <field formid="lastName"
            label="label.input.lastname.profile"
@@ -16,7 +17,7 @@
            binding="lastName"
            max-length="50"
            missing-error="address.lastname.missing"
-           range-error="error.message.50orless"/>
+           range-error="error.message.lessthan50"/>
 
     <field formid="address1"
            label="label.input.address1"
@@ -25,7 +26,7 @@
            binding="address1"
            max-length="50"
            missing-error="address.address1.missing"
-           range-error="error.message.50orless"/>
+           range-error="error.message.lessthan50"/>
 
     <field formid="address2"
            label="label.input.address2"
@@ -33,7 +34,7 @@
            mandatory="false"
            binding="address2"
            max-length="50"
-           range-error="error.message.50orless"/>
+           range-error="error.message.lessthan50"/>
 
     <field formid="country"
            label="label.input.country"
@@ -47,7 +48,7 @@
         </options>
     </field>
 
-    <include formid="states"
+    <include formid="state"
              name="states"
              missing-error="address.state.missing"
              parse-error="error.message.required"
