@@ -127,31 +127,31 @@ declare class FormBilling extends FormGroup {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#15) */
 	subscribe : FormField<boolean>
 }
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#2)*/
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#2)*/
 declare class FormAddress extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#4) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#4) */
 	addressId : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#6) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#6) */
 	firstName : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#8) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#8) */
 	lastName : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#10) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#10) */
 	address1 : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#12) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#12) */
 	address2 : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#14) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#14) */
 	city : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#18) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#18) */
 	postalCode : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#26) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#26) */
 	country : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#34) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#34) */
 	states : FormStates
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#37) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#37) */
 	phone : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#44) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#44) */
 	apply : FormAction
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#45) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#45) */
 	remove : FormAction
 }
 
@@ -355,31 +355,31 @@ interface SfraFormBilling extends SfraFormBase<FormBilling> {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#15) */
 	subscribe : SfraField<boolean> & SfraFieldBoolean
 }
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#2)*/
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#2)*/
 interface SfraFormAddress extends SfraFormBase<FormAddress> {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#4) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#4) */
 	addressId : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#6) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#6) */
 	firstName : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#8) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#8) */
 	lastName : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#10) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#10) */
 	address1 : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#12) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#12) */
 	address2 : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#14) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#14) */
 	city : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#18) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#18) */
 	postalCode : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#26) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#26) */
 	country : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#34) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#34) */
 	states : SfraFormStates
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#37) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#37) */
 	phone : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#44) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#44) */
 	apply : SfraAction
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#45) */
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_custom\cartridge\forms\default\address.xml#45) */
 	remove : SfraAction
 }
 
