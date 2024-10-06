@@ -7,7 +7,7 @@
 
     <div class="bg-light">
         <div class="form">
-            <isinclude template="home/addressForm.isml" />
+            <isinclude template="account/addressForm.isml" />
         </div>
     </div>
 
