@@ -2,7 +2,7 @@
     name="address-form" ${pdict.addressForm.attributes}>
 
     <div class="shipping">
-        <h2 class="text-center p-3 bg-white w-100">Shipping</h2>
+        <h2 class="text-center p-2 bg-white w-100">Shipping</h2>
         <!-- Name -->
         <div class="container">
             <div class="row">
@@ -48,7 +48,7 @@
             <div class="form-group
                 ${pdict.addressForm.address2.mandatory === true ? 'required' : ''}">
                 <label class="form-control-label" for="address2">
-                    ${Resource.msg('field.shipping.address.one', 'address', null)}
+                    ${Resource.msg('field.shipping.address.two', 'address', null)}
                 </label>
                 <input type="text" class="form-control" id="address2" <isprint value="${pdict.addressForm.address2.attributes}"
                     encoding="off" />
@@ -125,7 +125,7 @@
     </div>
 
     <div class="payment">
-        <h2 class="text-center p-3 bg-white w-100">Payment</h2>
+        <h2 class="text-center p-2 bg-white w-100">Payment</h2>
         <div class="container">
         </div>
     </div>
