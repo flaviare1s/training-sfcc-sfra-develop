@@ -1,4 +1,46 @@
-<div class="slot_content">
-    <isslot id="product_carousel" description="Main home page slot." context="global" />
-    ${'teste'}
-</div>
+<isdecorate template="common/layout/header">
+
+    <head>
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+        <link rel="stylesheet" type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('/css/carousel.css')}" />
+    </head>
+
+    <body>
+        <div class="slot_content">
+            <isslot id="product_carousel" description="Main home page slot." context="global" />
+            ${'teste'}
+        </div>
+
+        <div id="product_carousel" class="homepage-product-listing">
+            <isloop items="${slotcontent.content}" var="product" status="loopState">
+                <div class="product-slide">
+                    <isinclude
+                        url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'swatches', true)}" />
+                </div>
+            </isloop>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#product_carousel').slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
+    </body>
+</isdecorate>
