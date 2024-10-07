@@ -32,6 +32,41 @@ declare class FormAddress extends FormGroup {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#45) */
 	remove : FormAction
 }
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#2)*/
+declare class FormCreditCard extends FormGroup {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#5) */
+	editNumber : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#12) */
+	paymentMethod : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#14) */
+	cardType : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#17) */
+	cardNumber : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#20) */
+	cardOwner : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#23) */
+	expirationMonth : FormField<number>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#42) */
+	expirationYear : FormField<number>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#49) */
+	securityCode : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#52) */
+	saveCard : FormField<boolean>
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#2)*/
+declare class FormNewPasswords extends FormGroup {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#3) */
+	newpassword : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#13) */
+	newpasswordconfirm : FormField<string>
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#2)*/
+declare class FormCoRegisteredCustomer extends FormGroup {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#4) */
+	email : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#16) */
+	password : FormField<string>
+}
 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#2)*/
 declare class FormContactInfo extends FormGroup {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#5) */
@@ -56,6 +91,35 @@ declare class FormBilling extends FormGroup {
 	creditCardFields : FormCreditCard
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#15) */
 	subscribe : FormField<boolean>
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#2)*/
+declare class FormStates extends FormGroup {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#3) */
+	stateCode : FormField<string>
+}
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#2)*/
+declare class FormShippingShippingAddress extends FormGroup {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#12) */
+	addressFields : FormAddress
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#15) */
+	shippingMethodID : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#18) */
+	shippingAddressUseAsBillingAddress : FormField<boolean>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#20) */
+	isGift : FormField<boolean>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#21) */
+	giftMessage : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#24) */
+	save : FormAction
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#2)*/
+declare class FormShipping extends FormGroup {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#4) */
+	shipmentUUID : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#6) */
+	productLineItemUUID : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#9) */
+	shippingAddress : FormShippingShippingAddress
 }
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\profile.xml#2)*/
 declare class FormProfileCustomer extends FormGroup {
@@ -90,83 +154,19 @@ declare class FormProfile extends FormGroup {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\profile.xml#63) */
 	login : FormProfileLogin
 }
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#2)*/
-declare class FormStates extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#3) */
-	stateCode : FormField<string>
-}
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#2)*/
-declare class FormShippingShippingAddress extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#12) */
-	addressFields : FormAddress
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#15) */
-	shippingMethodID : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#18) */
-	shippingAddressUseAsBillingAddress : FormField<boolean>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#20) */
-	isGift : FormField<boolean>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#21) */
-	giftMessage : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#24) */
-	save : FormAction
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#2)*/
-declare class FormShipping extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#4) */
-	shipmentUUID : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#6) */
-	productLineItemUUID : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#9) */
-	shippingAddress : FormShippingShippingAddress
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#2)*/
-declare class FormNewPasswords extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#3) */
-	newpassword : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#13) */
-	newpasswordconfirm : FormField<string>
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#2)*/
-declare class FormCreditCard extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#5) */
-	editNumber : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#12) */
-	paymentMethod : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#14) */
-	cardType : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#17) */
-	cardNumber : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#20) */
-	cardOwner : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#23) */
-	expirationMonth : FormField<number>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#42) */
-	expirationYear : FormField<number>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#49) */
-	securityCode : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#52) */
-	saveCard : FormField<boolean>
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#2)*/
-declare class FormCoRegisteredCustomer extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#4) */
-	email : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#16) */
-	password : FormField<string>
-}
 
 declare global {
 interface SFCCForms {
 	address: FormAddress
+	creditCard: FormCreditCard
+	newPasswords: FormNewPasswords
+	coRegisteredCustomer: FormCoRegisteredCustomer
 	contactInfo: FormContactInfo
 	coCustomer: FormCoCustomer
 	billing: FormBilling
-	profile: FormProfile
 	states: FormStates
 	shipping: FormShipping
-	newPasswords: FormNewPasswords
-	creditCard: FormCreditCard
-	coRegisteredCustomer: FormCoRegisteredCustomer
+	profile: FormProfile
 }
 }
 
@@ -260,6 +260,41 @@ interface SfraFormAddress extends SfraFormBase<FormAddress> {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#45) */
 	remove : SfraAction
 }
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#2)*/
+interface SfraFormCreditCard extends SfraFormBase<FormCreditCard> {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#5) */
+	editNumber : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#12) */
+	paymentMethod : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#14) */
+	cardType : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#17) */
+	cardNumber : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#20) */
+	cardOwner : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#23) */
+	expirationMonth : SfraField<number> & SfraFieldInteger
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#42) */
+	expirationYear : SfraField<number> & SfraFieldInteger
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#49) */
+	securityCode : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#52) */
+	saveCard : SfraField<boolean> & SfraFieldBoolean
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#2)*/
+interface SfraFormNewPasswords extends SfraFormBase<FormNewPasswords> {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#3) */
+	newpassword : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#13) */
+	newpasswordconfirm : SfraField<string> & SfraFieldString
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#2)*/
+interface SfraFormCoRegisteredCustomer extends SfraFormBase<FormCoRegisteredCustomer> {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#4) */
+	email : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#16) */
+	password : SfraField<string> & SfraFieldString
+}
 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#2)*/
 interface SfraFormContactInfo extends SfraFormBase<FormContactInfo> {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#5) */
@@ -284,6 +319,35 @@ interface SfraFormBilling extends SfraFormBase<FormBilling> {
 	creditCardFields : SfraFormCreditCard
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#15) */
 	subscribe : SfraField<boolean> & SfraFieldBoolean
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#2)*/
+interface SfraFormStates extends SfraFormBase<FormStates> {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#3) */
+	stateCode : SfraField<string> & SfraFieldString
+}
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#2)*/
+interface SfraFormShippingShippingAddress {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#12) */
+	addressFields : SfraFormAddress
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#15) */
+	shippingMethodID : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#18) */
+	shippingAddressUseAsBillingAddress : SfraField<boolean> & SfraFieldBoolean
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#20) */
+	isGift : SfraField<boolean> & SfraFieldBoolean
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#21) */
+	giftMessage : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#24) */
+	save : SfraAction
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#2)*/
+interface SfraFormShipping extends SfraFormBase<FormShipping> {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#4) */
+	shipmentUUID : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#6) */
+	productLineItemUUID : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#9) */
+	shippingAddress : SfraFormShippingShippingAddress
 }
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\profile.xml#2)*/
 interface SfraFormProfileCustomer {
@@ -318,97 +382,33 @@ interface SfraFormProfile extends SfraFormBase<FormProfile> {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\profile.xml#63) */
 	login : SfraFormProfileLogin
 }
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#2)*/
-interface SfraFormStates extends SfraFormBase<FormStates> {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#3) */
-	stateCode : SfraField<string> & SfraFieldString
-}
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#2)*/
-interface SfraFormShippingShippingAddress {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#12) */
-	addressFields : SfraFormAddress
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#15) */
-	shippingMethodID : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#18) */
-	shippingAddressUseAsBillingAddress : SfraField<boolean> & SfraFieldBoolean
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#20) */
-	isGift : SfraField<boolean> & SfraFieldBoolean
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#21) */
-	giftMessage : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#24) */
-	save : SfraAction
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#2)*/
-interface SfraFormShipping extends SfraFormBase<FormShipping> {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#4) */
-	shipmentUUID : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#6) */
-	productLineItemUUID : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\shipping.xml#9) */
-	shippingAddress : SfraFormShippingShippingAddress
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#2)*/
-interface SfraFormNewPasswords extends SfraFormBase<FormNewPasswords> {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#3) */
-	newpassword : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\newPasswords.xml#13) */
-	newpasswordconfirm : SfraField<string> & SfraFieldString
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#2)*/
-interface SfraFormCreditCard extends SfraFormBase<FormCreditCard> {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#5) */
-	editNumber : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#12) */
-	paymentMethod : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#14) */
-	cardType : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#17) */
-	cardNumber : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#20) */
-	cardOwner : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#23) */
-	expirationMonth : SfraField<number> & SfraFieldInteger
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#42) */
-	expirationYear : SfraField<number> & SfraFieldInteger
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#49) */
-	securityCode : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\creditCard.xml#52) */
-	saveCard : SfraField<boolean> & SfraFieldBoolean
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#2)*/
-interface SfraFormCoRegisteredCustomer extends SfraFormBase<FormCoRegisteredCustomer> {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#4) */
-	email : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#16) */
-	password : SfraField<string> & SfraFieldString
-}
 
 declare global {
 interface SFRAServerForms {
 	getForm(name: 'address'): SfraFormAddress
+	getForm(name: 'creditCard'): SfraFormCreditCard
+	getForm(name: 'newPasswords'): SfraFormNewPasswords
+	getForm(name: 'coRegisteredCustomer'): SfraFormCoRegisteredCustomer
 	getForm(name: 'contactInfo'): SfraFormContactInfo
 	getForm(name: 'coCustomer'): SfraFormCoCustomer
 	getForm(name: 'billing'): SfraFormBilling
-	getForm(name: 'profile'): SfraFormProfile
 	getForm(name: 'states'): SfraFormStates
 	getForm(name: 'shipping'): SfraFormShipping
-	getForm(name: 'newPasswords'): SfraFormNewPasswords
-	getForm(name: 'creditCard'): SfraFormCreditCard
-	getForm(name: 'coRegisteredCustomer'): SfraFormCoRegisteredCustomer
+	getForm(name: 'profile'): SfraFormProfile
 }
 }
 
 declare global {
 interface SRFAForms {
 	address: SfraFormAddress
+	creditCard: SfraFormCreditCard
+	newPasswords: SfraFormNewPasswords
+	coRegisteredCustomer: SfraFormCoRegisteredCustomer
 	contactInfo: SfraFormContactInfo
 	coCustomer: SfraFormCoCustomer
 	billing: SfraFormBilling
-	profile: SfraFormProfile
 	states: SfraFormStates
 	shipping: SfraFormShipping
-	newPasswords: SfraFormNewPasswords
-	creditCard: SfraFormCreditCard
-	coRegisteredCustomer: SfraFormCoRegisteredCustomer
+	profile: SfraFormProfile
 }
 }
