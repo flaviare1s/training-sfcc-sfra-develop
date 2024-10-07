@@ -1,6 +1,6 @@
-<div id="product_carousel" class="homepage-product-listing row">
+<div id="product_carousel" class="homepage-product-listing">
     <isloop items="${slotcontent.content}" var="product" status="loopState">
-        <div class="col-6 col-sm-4">
+        <div class="product-slide">
             <isinclude
                 url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'pview', 'tile', 'ratings', true, 'swatches', true)}" />
         </div>
