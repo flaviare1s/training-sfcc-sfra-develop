@@ -15,18 +15,7 @@ $(document).ready(function () {
     processInclude(require('./components/clientSideValidation'));
     processInclude(require('./components/countrySelector'));
     processInclude(require('./components/toolTip'));
-    $('#product_carousel').slick({
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
+    processInclude(require('./components/carousel'));
 });
 
 require('./thirdParty/bootstrap');

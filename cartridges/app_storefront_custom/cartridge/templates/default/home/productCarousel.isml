@@ -1,3 +1,5 @@
 <div class="slot_content">
     <isslot id="product_carousel" description="Main home page slot." context="global" />
 </div>
+
+<script src="${URLUtils.staticURL('/js/main.js')}"></script>

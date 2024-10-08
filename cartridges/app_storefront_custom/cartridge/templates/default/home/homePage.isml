@@ -1,3 +1,7 @@
-<isdecorate template="common/layout/page">
-    <isinclude template="home/productCarousel" />
-</isdecorate>
+<link rel="stylesheet" type="text/css" href="/client/default/css/carousel.css"/bin>
+
+<div class="home-page">
+    <isdecorate template="common/layout/page">
+        <isinclude template="home/productCarousel" />
+    </isdecorate>
+</div>
