@@ -8876,7 +8876,7 @@ set-immediate-shim@^1.0.0:
     flag-icons "7.1.0"
     font-awesome "^4.7.0"
     jquery "^3.5.1"
-    sfra "file:../../../../AppData/Local/Yarn/Cache/v6/npm-sfra-7.0.0-79c32ce4-3c64-4520-a693-ff409ea26b9c-1728154109168/node_modules/sfra"
+    sfra "file:../../../../AppData/Local/Yarn/Cache/v6/npm-sfra-7.0.0-73358791-edff-4d7b-bb35-f605e82fdca5-1728441019116/node_modules/sfra"
 
 sgmf-scripts@^3.0.0:
   version "3.0.0"
