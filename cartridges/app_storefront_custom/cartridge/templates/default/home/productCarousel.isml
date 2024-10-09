@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('/css/carousel.css')}" />
+
 <div class="slot_content">
     <isslot id="product_carousel" description="Main home page slot." context="global" />
 </div>

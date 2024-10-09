@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/client/default/css/carousel.css"/bin>
+<link rel="stylesheet" type="text/css" href="${URLUtils.staticURL('/css/style.css')}" />
 
 <div class="home-page">
     <isdecorate template="common/layout/page">
