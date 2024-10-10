@@ -1,5 +1,5 @@
-<isinclude template="experience/components/commerce_assets/header" />
-<div class="banner">
-    <img src="${content.bannerImage}" alt="${content.bannerMessage}">
-    <p>${content.bannerMessage}</p>
+<div class="custom-banner">
+    <a href="${pdict.categoryURL}">
+        <img src="${pdict.bannerImage}" alt="Banner Image">
+    </a>
 </div>
