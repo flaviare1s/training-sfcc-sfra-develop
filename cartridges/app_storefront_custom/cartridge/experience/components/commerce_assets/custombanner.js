@@ -24,6 +24,6 @@ module.exports.render = function (context, modelIn) {
     response.setExpires(expires);
 
     return new Template(
-        'experience/components/commerce_assets/campaignBanner'
+        'experience/components/commerce_assets/customBanner'
     ).render(model).text;
 };

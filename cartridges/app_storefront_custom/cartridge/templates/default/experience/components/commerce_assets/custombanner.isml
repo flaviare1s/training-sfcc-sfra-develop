@@ -1,0 +1,5 @@
+<isinclude template="experience/components/commerce_assets/header" />
+<div class="banner">
+    <img src="${content.bannerImage}" alt="${content.bannerMessage}">
+    <p>${content.bannerMessage}</p>
+</div>
