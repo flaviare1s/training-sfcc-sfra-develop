@@ -7,7 +7,7 @@ var CatalogMgr = require('dw/catalog/CatalogMgr');
 server.extend(module.superModule);
 
 server.append('Show', function (req, res, next) {
-    var catId = req.querystring.catId || ''; // Certifique-se de que catId está definido
+    var catId = req.querystring.catId || '';
     var category = CatalogMgr.getCategory(catId);
     var pageDesignerID =
         category && 'pageDesignerPageID' in category.custom
