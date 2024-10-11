@@ -10,7 +10,7 @@ module.exports.render = function (context, modelIn) {
     model.bannerImage = content.bannerImage;
     model.categoryURL = content.category ? content.category.URL : '#';
 
-    return new Template('experience/components/<folder>/custombanner').render(
+    return new Template('experience/components/commerce_assets/custombanner').render(
         model
     ).text;
 };
