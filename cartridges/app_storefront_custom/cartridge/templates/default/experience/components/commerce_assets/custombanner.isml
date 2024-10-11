@@ -1,5 +1,6 @@
 <div class="custom-banner">
     <a href="${pdict.categoryURL}">
-        <img src="${pdict.bannerImage}" alt="Banner Image">
+        <img src="${pdict.bannerImage}" alt="Banner Image" />
+        <isprint value="${pdict.bannerImage}" />
     </a>
 </div>
