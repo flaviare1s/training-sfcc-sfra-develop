@@ -4,21 +4,26 @@
     "group": "commerce_assets",
     "attribute_definition_groups": [
         {
-            "id": "bannerAttributes",
-            "name": "Banner Attributes",
-            "description": "Attributes for the custom banner.",
+            "id": "bannerImage",
+            "name": "Banner Image",
+            "description": "The visual display of the banner image in the background.",
             "attribute_definitions": [
                 {
-                    "id": "bannerImage",
-                    "name": "Banner Image",
-                    "description": "The image to be displayed on the banner.",
+                    "id": "image",
+                    "name": "Image",
                     "type": "image",
                     "required": true
-                },
+                }
+            ]
+        },
+        {
+            "id": "shopNowLink",
+            "name": "Shop Now Link",
+            "description": "The Shop Now link on the banner image",
+            "attribute_definitions": [
                 {
-                    "id": "category",
-                    "name": "Category",
-                    "description": "The category to link to.",
+                    "id": "categoryLink",
+                    "name": "Category Link",
                     "type": "category",
                     "required": true
                 }

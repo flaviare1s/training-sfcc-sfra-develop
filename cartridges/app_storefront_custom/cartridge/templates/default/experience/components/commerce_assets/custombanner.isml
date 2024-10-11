@@ -2,5 +2,7 @@
     <a href="${pdict.categoryURL}">
         <img src="${pdict.bannerImage}" alt="Banner Image" />
         <isprint value="${pdict.bannerImage}" />
+        <isprint value="${pdict.categoryURL}" />
+        ${'teste'}
     </a>
 </div>
