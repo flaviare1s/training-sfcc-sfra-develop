@@ -32,6 +32,23 @@ declare class FormAddress extends FormGroup {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#45) */
 	remove : FormAction
 }
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#2)*/
+declare class FormCoRegisteredCustomer extends FormGroup {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#4) */
+	email : FormField<string>
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#16) */
+	password : FormField<string>
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#2)*/
+declare class FormContactInfo extends FormGroup {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#5) */
+	phone : FormField<string>
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coCustomer.xml#2)*/
+declare class FormCoCustomer extends FormGroup {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coCustomer.xml#4) */
+	email : FormField<string>
+}
 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#2)*/
 declare class FormBilling extends FormGroup {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#4) */
@@ -46,23 +63,6 @@ declare class FormBilling extends FormGroup {
 	creditCardFields : FormCreditCard
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#15) */
 	subscribe : FormField<boolean>
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#2)*/
-declare class FormContactInfo extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#5) */
-	phone : FormField<string>
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coCustomer.xml#2)*/
-declare class FormCoCustomer extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coCustomer.xml#4) */
-	email : FormField<string>
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#2)*/
-declare class FormCoRegisteredCustomer extends FormGroup {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#4) */
-	email : FormField<string>
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#16) */
-	password : FormField<string>
 }
 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#2)*/
 declare class FormStates extends FormGroup {
@@ -158,10 +158,10 @@ declare class FormCreditCard extends FormGroup {
 declare global {
 interface SFCCForms {
 	address: FormAddress
-	billing: FormBilling
+	coRegisteredCustomer: FormCoRegisteredCustomer
 	contactInfo: FormContactInfo
 	coCustomer: FormCoCustomer
-	coRegisteredCustomer: FormCoRegisteredCustomer
+	billing: FormBilling
 	states: FormStates
 	shipping: FormShipping
 	profile: FormProfile
@@ -260,6 +260,23 @@ interface SfraFormAddress extends SfraFormBase<FormAddress> {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\address.xml#45) */
 	remove : SfraAction
 }
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#2)*/
+interface SfraFormCoRegisteredCustomer extends SfraFormBase<FormCoRegisteredCustomer> {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#4) */
+	email : SfraField<string> & SfraFieldString
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#16) */
+	password : SfraField<string> & SfraFieldString
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#2)*/
+interface SfraFormContactInfo extends SfraFormBase<FormContactInfo> {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#5) */
+	phone : SfraField<string> & SfraFieldString
+}
+/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coCustomer.xml#2)*/
+interface SfraFormCoCustomer extends SfraFormBase<FormCoCustomer> {
+	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coCustomer.xml#4) */
+	email : SfraField<string> & SfraFieldString
+}
 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#2)*/
 interface SfraFormBilling extends SfraFormBase<FormBilling> {
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#4) */
@@ -274,23 +291,6 @@ interface SfraFormBilling extends SfraFormBase<FormBilling> {
 	creditCardFields : SfraFormCreditCard
 	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\billing.xml#15) */
 	subscribe : SfraField<boolean> & SfraFieldBoolean
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#2)*/
-interface SfraFormContactInfo extends SfraFormBase<FormContactInfo> {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\contactInfo.xml#5) */
-	phone : SfraField<string> & SfraFieldString
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coCustomer.xml#2)*/
-interface SfraFormCoCustomer extends SfraFormBase<FormCoCustomer> {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coCustomer.xml#4) */
-	email : SfraField<string> & SfraFieldString
-}
-/** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#2)*/
-interface SfraFormCoRegisteredCustomer extends SfraFormBase<FormCoRegisteredCustomer> {
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#4) */
-	email : SfraField<string> & SfraFieldString
-	 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\coRegisteredCustomer.xml#16) */
-	password : SfraField<string> & SfraFieldString
 }
 /** @source [definition](file:c:\Users\flavi\OneDrive\Documentos\Repositorios\training-sfcc-sfra-develop\cartridges\app_storefront_base\cartridge\forms\default\states.xml#2)*/
 interface SfraFormStates extends SfraFormBase<FormStates> {
@@ -386,10 +386,10 @@ interface SfraFormCreditCard extends SfraFormBase<FormCreditCard> {
 declare global {
 interface SFRAServerForms {
 	getForm(name: 'address'): SfraFormAddress
-	getForm(name: 'billing'): SfraFormBilling
+	getForm(name: 'coRegisteredCustomer'): SfraFormCoRegisteredCustomer
 	getForm(name: 'contactInfo'): SfraFormContactInfo
 	getForm(name: 'coCustomer'): SfraFormCoCustomer
-	getForm(name: 'coRegisteredCustomer'): SfraFormCoRegisteredCustomer
+	getForm(name: 'billing'): SfraFormBilling
 	getForm(name: 'states'): SfraFormStates
 	getForm(name: 'shipping'): SfraFormShipping
 	getForm(name: 'profile'): SfraFormProfile
@@ -401,10 +401,10 @@ interface SFRAServerForms {
 declare global {
 interface SRFAForms {
 	address: SfraFormAddress
-	billing: SfraFormBilling
+	coRegisteredCustomer: SfraFormCoRegisteredCustomer
 	contactInfo: SfraFormContactInfo
 	coCustomer: SfraFormCoCustomer
-	coRegisteredCustomer: SfraFormCoRegisteredCustomer
+	billing: SfraFormBilling
 	states: SfraFormStates
 	shipping: SfraFormShipping
 	profile: SfraFormProfile

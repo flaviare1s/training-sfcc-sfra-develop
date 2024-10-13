@@ -18,7 +18,6 @@ module.exports.render = function (context, modelIn) {
     var model = modelIn || new HashMap();
     var content = context.content;
 
-    model.heading = content.heading;
     model.image = ImageTransformation.getScaledImage(content.image);
     model.categoryLink = URLUtils.url(
         'Search-Show',
