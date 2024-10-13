@@ -1,0 +1,34 @@
+{
+    "name": "Wayfinder Layout",
+    "description": "Wayfinder Layout.",
+    "group": "layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "wayfinderLayout",
+            "name": "Wayfinder Layout",
+            "description": "Wayfinder Layout.",
+            "attribute_definitions": [
+                {
+                    "id": "image",
+                    "name": "Image",
+                    "type": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "id": "shopNowLink",
+            "name": "Shop Now Link",
+            "description": "The Shop Now link on the banner image",
+            "attribute_definitions": [
+                {
+                    "id": "categoryLink",
+                    "name": "Category Link",
+                    "type": "category",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

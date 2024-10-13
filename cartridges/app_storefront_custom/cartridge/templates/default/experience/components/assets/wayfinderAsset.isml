@@ -1,0 +1,10 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+
+<div class="wayfinder-asset">
+    <a href="${pdict.categoryLink}">
+        <img src="${pdict.image.src}" alt="${pdict.categoryName}" />
+        <div class="wayfinder-title">${pdict.categoryName}</div>
+    </a>
+</div>

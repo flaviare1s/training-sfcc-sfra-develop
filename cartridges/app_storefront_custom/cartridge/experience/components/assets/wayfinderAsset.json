@@ -1,0 +1,26 @@
+{
+    "name": "Wayfinder Asset",
+    "description": "Wayfinder Asset.",
+    "group": "assets",
+    "attribute_definition_groups": [
+        {
+            "id": "wayfinderAsset",
+            "name": "Wayfinder Asset",
+            "description": "Wayfinder Asset.",
+            "attribute_definitions": [
+                {
+                    "id": "image",
+                    "name": "Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "category",
+                    "name": "Category",
+                    "type": "category",
+                    "required": true
+                }
+            ]
+        }
+    ]
+}
