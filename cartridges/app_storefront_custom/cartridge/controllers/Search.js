@@ -21,8 +21,6 @@ server.append('Show', function (req, res, next) {
         return response.writer.println(PageMgr.renderPage(pageDesigner.ID, ''));
     }
 
-    var viewData = res.getViewData();
-
     next();
 });
 
