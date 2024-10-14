@@ -6,15 +6,13 @@ var URLUtils = require('dw/web/URLUtils');
 var ImageTransformation = require('~/cartridge/experience/utilities/ImageTransformation.js');
 
 /**
- * Render logic for the assets.categorytile.
+ * Render logic for the assets.wayfinderAsset.
  */
 module.exports.render = function (context) {
     var model = new HashMap();
     var content = context.content;
     var category = content.category;
-    /*
-     * If no image url was provided, clicking the category tile will lead the user back to the home page.
-     */
+  
     if (category) {
         model.url = URLUtils.url('Search-Show', 'cgid', category.ID);
     } else {
