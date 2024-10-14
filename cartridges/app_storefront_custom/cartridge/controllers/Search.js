@@ -18,9 +18,10 @@ server.append('Show', function (req, res, next) {
     var pageDesigner = pageDesignerID ? PageMgr.getPage(pageDesignerID) : null;
 
     if (pageDesigner && pageDesigner.isVisible()) {
-        response.writer.println(PageMgr.renderPage(pageDesigner.ID, ''));
-        return;
+        return response.writer.println(PageMgr.renderPage(pageDesigner.ID, ''));
     }
+
+    var viewData = res.getViewData();
 
     next();
 });
