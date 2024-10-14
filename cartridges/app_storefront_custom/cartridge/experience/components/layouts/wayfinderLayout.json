@@ -1,34 +1,59 @@
 {
-    "name": "Wayfinder Layout",
-    "description": "Wayfinder Layout.",
+    "name": "1 Row, 4 Column, Portrait",
     "group": "layouts",
-    "attribute_definition_groups": [
+    "attribute_definition_groups": [],
+    "region_definitions": [
         {
-            "id": "wayfinderLayout",
-            "name": "Wayfinder Layout",
-            "description": "Wayfinder Layout.",
-            "attribute_definitions": [
-                {
-                    "id": "image",
-                    "name": "Image",
-                    "type": "image",
-                    "required": true
-                }
+            "id": "column1",
+            "name": "Column 1",
+            "max_components": 1,
+            "component_type_exclusions": [
+                { "type_id": "layouts.1column" },
+                { "type_id": "layouts.2column" },
+                { "type_id": "layouts.3column" },
+                { "type_id": "layouts.4column" },
+                { "type_id": "layouts.gridcomponentlayout" },
+                { "type_id": "einstein.noanchorgrid" }
             ]
         },
         {
-            "id": "shopNowLink",
-            "name": "Shop Now Link",
-            "description": "The Shop Now link on the banner image",
-            "attribute_definitions": [
-                {
-                    "id": "categoryLink",
-                    "name": "Category Link",
-                    "type": "category",
-                    "required": true
-                }
+            "id": "column2",
+            "name": "Column 2",
+            "max_components": 1,
+            "component_type_exclusions": [
+                { "type_id": "layouts.1column" },
+                { "type_id": "layouts.2column" },
+                { "type_id": "layouts.3column" },
+                { "type_id": "layouts.4column" },
+                { "type_id": "layouts.gridcomponentlayout" },
+                { "type_id": "einstein.noanchorgrid" }
+            ]
+        },
+        {
+            "id": "column3",
+            "name": "Column 3",
+            "max_components": 1,
+            "component_type_exclusions": [
+                { "type_id": "layouts.1column" },
+                { "type_id": "layouts.2column" },
+                { "type_id": "layouts.3column" },
+                { "type_id": "layouts.4column" },
+                { "type_id": "layouts.gridcomponentlayout" },
+                { "type_id": "einstein.noanchorgrid" }
+            ]
+        },
+        {
+            "id": "column4",
+            "name": "Column 4",
+            "max_components": 1,
+            "component_type_exclusions": [
+                { "type_id": "layouts.1column" },
+                { "type_id": "layouts.2column" },
+                { "type_id": "layouts.3column" },
+                { "type_id": "layouts.4column" },
+                { "type_id": "layouts.gridcomponentlayout" },
+                { "type_id": "einstein.noanchorgrid" }
             ]
         }
-    ],
-    "region_definitions": []
+    ]
 }
