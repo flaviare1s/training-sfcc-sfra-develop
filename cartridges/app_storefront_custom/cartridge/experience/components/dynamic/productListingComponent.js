@@ -59,6 +59,6 @@ module.exports.render = function (context, modelIn) {
     response.setVaryBy('price_promotion');
 
     return new Template(
-        'experience/components/layouts/productList/productListingComponent.isml'
+        'experience/components/dynamic/productList/productListingComponent'
     ).render(model).text;
 };

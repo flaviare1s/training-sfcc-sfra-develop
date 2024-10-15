@@ -4,7 +4,7 @@
     "group": "dynamic",
     "attribute_definition_groups": [
         {
-            "id": "product Listing",
+            "id": "productListing",
             "name": "Settings",
             "description": "Product List Settings",
             "attribute_definitions": [
