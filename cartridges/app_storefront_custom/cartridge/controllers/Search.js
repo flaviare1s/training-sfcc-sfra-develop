@@ -21,7 +21,7 @@ server.append('Show', function (req, res, next) {
         return response.writer.println(PageMgr.renderPage(pageDesigner.ID, ''));
     }
 
-    next();
+    return next();
 });
 
 module.exports = server.exports();

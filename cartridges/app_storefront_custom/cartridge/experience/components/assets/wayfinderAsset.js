@@ -3,7 +3,7 @@
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
 var URLUtils = require('dw/web/URLUtils');
-var ImageTransformation = require('~/cartridge/experience/utilities/ImageTransformation.js');
+var ImageTransformation = require('app_storefront_base/cartridge/experience/utilities/ImageTransformation.js');
 
 /**
  * Render logic for the assets.wayfinderAsset.
@@ -12,7 +12,7 @@ module.exports.render = function (context) {
     var model = new HashMap();
     var content = context.content;
     var category = content.category;
-  
+
     if (category) {
         model.url = URLUtils.url('Search-Show', 'cgid', category.ID);
     } else {

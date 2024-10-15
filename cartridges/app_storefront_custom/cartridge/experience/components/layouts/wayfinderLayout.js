@@ -2,7 +2,7 @@
 
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
-var PageRenderHelper = require('~/cartridge/experience/utilities/PageRenderHelper.js');
+var PageRenderHelper = require('app_storefront_base/cartridge/experience/utilities/PageRenderHelper.js');
 
 /**
  * Render logic for the layouts.wayfinderLayout.
