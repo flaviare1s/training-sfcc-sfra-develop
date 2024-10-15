@@ -14,15 +14,9 @@
         <figcaption class="category-text_container" <isif condition="${pdict.text_alignment === 'center'}">
             style="text-align: center"</isif>>
             <div class="category-text_heading">
-                <span class="category-text category-text_heading">
+                <span class="category-text category-text_heading text-dark font-weight-bold h5">
                     <isprint value="${pdict.text_headline}" /></span>
             </div>
-            <isif condition="${pdict.text_subline}">
-                <div class="category-text_subheading">
-                    <span class="category-text">
-                        <isprint value="${pdict.text_subline}" /></span>
-                </div>
-            </isif>
         </figcaption>
     </a>
 </figure>

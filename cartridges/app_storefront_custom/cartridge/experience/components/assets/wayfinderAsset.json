@@ -34,12 +34,6 @@
                     "required": true
                 },
                 {
-                    "id": "text_subline",
-                    "name": "Subheading",
-                    "type": "string",
-                    "required": false
-                },
-                {
                     "id": "text_alignment",
                     "name": "Text Alignment",
                     "type": "enum",
