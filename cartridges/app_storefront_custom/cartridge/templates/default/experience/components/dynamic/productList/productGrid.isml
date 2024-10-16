@@ -1,0 +1,5 @@
+<isinclude template="experience/components/dynamic/productList/productTiles" />
+
+<div class="col-12 grid-footer" data-sort-options="${JSON.stringify(pdict.productSearch.productSort)}"
+    data-page-size="4" data-page-number="${pdict.productSearch.pageNumber}">
+</div>

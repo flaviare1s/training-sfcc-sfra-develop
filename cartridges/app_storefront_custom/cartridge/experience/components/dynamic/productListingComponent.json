@@ -8,6 +8,12 @@
             "name": "Settings",
             "description": "Product List Settings",
             "attribute_definitions": [
+                 {
+                    "id": "productIds",
+                    "name": "Product IDs",
+                    "type": "string",
+                    "required": false
+                },
                 {
                     "id": "category",
                     "name": "Category",
@@ -15,22 +21,6 @@
                     "required": true,
                     "dynamic_lookup": {
                         "aspect_attribute_alias": "category"
-                    }
-                }
-            ]
-        },
-        {
-            "id": "promotionalContent",
-            "name": "Promotional Content",
-            "description": "Promotional Content Settings",
-            "attribute_definitions": [
-                {
-                    "id": "displayFormat",
-                    "name": "Display Content",
-                    "type": "custom",
-                    "required": false,
-                    "editor_definition": {
-                        "type": "custom.tileDisplayFormat"
                     }
                 }
             ]
@@ -52,38 +42,6 @@
         {
             "id": "gridRegion4",
             "name": "Grid Region 4"
-        },
-        {
-            "id": "gridRegion5",
-            "name": "Grid Region 5"
-        },
-        {
-            "id": "gridRegion6",
-            "name": "Grid Region 6"
-        },
-        {
-            "id": "gridRegion7",
-            "name": "Grid Region 7"
-        },
-        {
-            "id": "gridRegion8",
-            "name": "Grid Region 8"
-        },
-        {
-            "id": "gridRegion9",
-            "name": "Grid Region 9"
-        },
-        {
-            "id": "gridRegion10",
-            "name": "Grid Region 10"
-        },
-        {
-            "id": "gridRegion11",
-            "name": "Grid Region 11"
-        },
-        {
-            "id": "gridRegion12",
-            "name": "Grid Region 12"
         }
     ]
 }
