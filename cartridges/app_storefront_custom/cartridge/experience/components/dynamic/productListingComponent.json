@@ -1,11 +1,11 @@
 {
-    "name": "Product Listing Component",
-    "description": "Product Listing Component",
+    "name": "Product Listing",
+    "description": "Product Listing",
     "group": "dynamic",
     "attribute_definition_groups": [
         {
             "id": "productListing",
-            "name": "Settings",
+            "name": "List of Product IDs",
             "description": "Product List Settings",
             "attribute_definitions": [
                  {
@@ -13,16 +13,23 @@
                     "name": "Product IDs",
                     "type": "string",
                     "required": false
-                },
-                {
-                    "id": "category",
-                    "name": "Category",
-                    "type": "category",
-                    "required": false,
-                    "dynamic_lookup": {
-                        "aspect_attribute_alias": "category"
-                    }
                 }
+            ]
+        },
+        {
+            "id": "productCategory",
+            "name": "Category",
+            "description": "Product List Settings",
+            "attribute_definitions": [
+                 {
+                     "id": "category",
+                     "name": "Category",
+                     "type": "category",
+                     "required": false,
+                     "dynamic_lookup": {
+                         "aspect_attribute_alias": "category"
+                     }
+                 }
             ]
         }
     ],
