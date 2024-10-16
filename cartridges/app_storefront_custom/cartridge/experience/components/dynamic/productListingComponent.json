@@ -12,13 +12,13 @@
                     "id": "productIds",
                     "name": "Product IDs",
                     "type": "string",
-                    "required": false
+                    "required": true
                 },
                 {
                     "id": "category",
                     "name": "Category",
                     "type": "category",
-                    "required": true,
+                    "required": false,
                     "dynamic_lookup": {
                         "aspect_attribute_alias": "category"
                     }
