@@ -1,6 +1,11 @@
 <form action="${URLUtils.url('Address-SaveAddress', 'addressId', pdict.addressId)}" class="address-form bg-light w-100"
     method="POST" name="address-form" ${pdict.addressForm.attributes}>
 
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('client/default/js/commentField.js');
+    </isscript>
+
     <div class="shipping">
         <h2 class="text-center p-2 bg-white w-100">Shipping</h2>
         <!-- Name -->
@@ -146,16 +151,6 @@
                 </div>
             </div>
 
-            <script>
-                function updateCharacterCount() {
-                    const commentsField = document.getElementById('comments');
-                    const charCountDisplay = document.getElementById('charCount');
-                    const charCount = commentsField.value.length;
-                    const remainingCharacters = 150 - charCount;
-                    charCountDisplay.innerText = `You have ${remainingCharacters} characters left out of 150`;
-                    console.log(remainingCharacters)
-                }
-            </script>
             </div>
         </div>
     </div>
