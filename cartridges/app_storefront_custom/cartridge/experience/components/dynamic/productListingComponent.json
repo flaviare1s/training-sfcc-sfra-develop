@@ -37,18 +37,6 @@
         {
             "id": "gridRegion1",
             "name": "Grid Region 1"
-        },
-        {
-            "id": "gridRegion2",
-            "name": "Grid Region 2"
-        },
-        {
-            "id": "gridRegion3",
-            "name": "Grid Region 3"
-        },
-        {
-            "id": "gridRegion4",
-            "name": "Grid Region 4"
         }
     ]
 }
