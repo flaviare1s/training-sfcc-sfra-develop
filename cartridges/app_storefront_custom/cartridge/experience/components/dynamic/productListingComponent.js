@@ -14,13 +14,17 @@ module.exports.render = function (context, modelIn) {
     var content = context.content;
 
     var CatalogMgr = require('dw/catalog/CatalogMgr');
+    var ProductMgr = require('dw/catalog/ProductMgr');
     var ProductSearchModel = require('dw/catalog/ProductSearchModel');
     var searchHelper = require('*/cartridge/scripts/helpers/searchHelpers');
     var ProductSearch = require('*/cartridge/models/search/productSearch');
 
     var apiProductSearch = new ProductSearchModel();
     var params = {};
-    var productIds = content.productIds ? content.productIds.split(',') : [];
+    var productIdsInput = content.productIds || '';
+    var productIds = productIdsInput.split(',').map(function (id) {
+        return id.trim();
+    }).filter(Boolean);
 
     if (content.category) {
         // Prioritize category
@@ -41,7 +45,9 @@ module.exports.render = function (context, modelIn) {
         model.maxSlots = 4;
     } else if (productIds.length > 0) {
         // Use product IDs if no category
-        model.productSearch = { productIds: productIds };
+        model.productSearch = productIds.map(function (id) {
+            return ProductMgr.getProduct(id);
+        }).filter(Boolean);
     }
 
     var gridCol = '4';
