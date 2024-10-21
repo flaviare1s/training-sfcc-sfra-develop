@@ -1,0 +1,42 @@
+{
+    "name": "Product Listing",
+    "description": "Product Listing",
+    "group": "dynamic",
+    "attribute_definition_groups": [
+        {
+            "id": "productListing",
+            "name": "List of Product IDs",
+            "description": "Product List Settings",
+            "attribute_definitions": [
+                 {
+                    "id": "productIds",
+                    "name": "Product IDs",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "productCategory",
+            "name": "Category",
+            "description": "Product List Settings",
+            "attribute_definitions": [
+                 {
+                     "id": "category",
+                     "name": "Category",
+                     "type": "category",
+                     "required": false,
+                     "dynamic_lookup": {
+                         "aspect_attribute_alias": "category"
+                     }
+                 }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id": "gridRegion1",
+            "name": "Grid Region 1"
+        }
+    ]
+}

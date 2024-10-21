@@ -1,0 +1,22 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/search.js');
+    assets.addCss('/css/experience/components/commerceLayouts/layout.css');
+    assets.addCss('/css/search.css');
+    assets.addCss('/css/experience/components/commerceLayouts/productList.css');
+</isscript>
+
+<div class="container search-results">
+    <div class="row">
+        <div class="tab-content col-12">
+            <div class="tab-pane container active" id="product-search-results" role="tabpanel"
+                aria-labelledby="product-tab">
+                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                    <div class="row product-grid" itemtype="http://schema.org/SomeProducts" itemid="#product">
+                        <isinclude template="experience/components/dynamic/productList/productGrid" />
+                    </div>
+                </isif>
+            </div>
+        </div>
+    </div>
+</div>
