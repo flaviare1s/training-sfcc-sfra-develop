@@ -14,14 +14,17 @@ server.append('Show', function (req, res, next) {
 
     if (category) {
         Logger.info('Category ID: ' + categoryId);
+        Logger.info('Category Name: ' + category.name);
+        Logger.info('Custom Attributes: ' + JSON.stringify(category.custom));
         Logger.info('Background Color: ' + category.custom.backgroundColor);
         Logger.info('Text Color: ' + category.custom.textColor);
         Logger.info('Text Attribute: ' + category.custom.textAttribute);
 
         viewData.category = {
-            backgroundColor: category.custom.backgroundColor,
-            textColor: category.custom.textColor,
-            textAttribute: category.custom.textAttribute
+            categoryId: categoryId,
+            backgroundColor: category.custom.backgroundColor || 'defaultColor',
+            textColor: category.custom.textColor || 'defaultTextColor',
+            textAttribute: category.custom.textAttribute || 'defaultText'
         };
     } else {
         Logger.warn('Category not found for ID: ' + categoryId);
