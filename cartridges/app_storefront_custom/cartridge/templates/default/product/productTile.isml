@@ -8,13 +8,13 @@
 <div class="product-tile">
     <!-- dwMarker="product" dwContentID="${product.uuid}" -->
     <isinclude template="product/components/productTileImage" />
-    <iscomment> <isif
-        condition="${viewData.category && viewData.category.backgroundColor && viewData.category.textColor && viewData.category.textAttribute}"> </iscomment>
+    <isif
+        condition="${viewData.category && viewData.category.backgroundColor && viewData.category.textColor && viewData.category.textAttribute}">
         <div class="product-badge"
             style="background-color: ${viewData.category.backgroundColor}; color: ${viewData.category.textColor};">
             ${viewData.category.textAttribute}
         </div>
-    <iscomment> </isif> </iscomment>
+    </isif>
     <div class="tile-body">
         <isif condition="${pdict.display.swatches !== false}">
             <isinclude template="product/components/productTileSwatch" />
